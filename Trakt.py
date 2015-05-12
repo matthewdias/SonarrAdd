@@ -8,19 +8,19 @@ from StringIO import StringIO
 import requests
 
 # Trakt Configuration
-trakt_list_url = "https://api-v2launch.trakt.tv/users/matthewdias/lists/currently-watching/items"
+trakt_list_url = "https://api-v2launch.trakt.tv/users/{user}/lists/{list}/items"
 trakt_apikey = ".."
 
 # SonarrAdd configuration
 db_name = "sonarradd.db"
-install_path = "/Users/Matthew/.config/sonarradd"  # Directory where sickadd.db will be created
+install_path = "/Users/{user}/.config/sonarradd"  # Directory where sonarradd.db will be created
 sonarradd_db = install_path + "/" + db_name
 
 # Sonarr Configuration
 sonarr_url = "http://localhost"
 sonarr_port = "8989"
 sonarr_apikey = ".."
-sonarr_series_folder = "/Users/Matthew/TV"
+sonarr_series_folder = ".."
 
 
 def db_check():
